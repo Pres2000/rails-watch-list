@@ -1,0 +1,11 @@
+<div class="container">
+  <h1>Your movie lists</h1>
+  <ul>
+    <% @lists.each do |movie| %>
+      <li><%= movie.name %></li>
+      <p><%= link_to "details", list_path(movie[:id]) %></p>
+    <% end %>
+  </ul>
+  <hr>
+  <%= link_to "Create new list", new_list_path %>
+</div>
