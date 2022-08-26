@@ -1,9 +1,9 @@
 <div class="container">
-  <h1>Your movie lists</h1>
+  <h1>Save any kind of movies</h1>
   <ul>
-    <% @lists.each do |movie| %>
-      <li><%= movie.name %></li>
-      <p><%= link_to "details", list_path(movie[:id]) %></p>
+    <% @lists.each do |list| %>
+      <li><%= list.name %></li>
+      <p><%= link_to "details", list_path(list) %></p>
     <% end %>
   </ul>
   <hr>
